@@ -1,14 +1,9 @@
-dining_state = 0 #unselect state = 0, select state = 1
-lib_state = 0
-guide_state = 0
-setting_state = 0
-building_state = 0
-current_states = [dining_state, lib_state, guide_state, setting_state, building_state]
+current_states = [0,0,0,0,0] #dining_state, lib_state, guide_state,
+#setting_state, building_state, unselect state = 0, select state = 1
 
 #click, then change state
 def state_update(need_update, current_states):
     if current_states[need_update] == 0:
-        current_states = [0,0,0,0,0]
         current_states[need_update] = 1
     else:
         current_states[need_update] = 0
@@ -23,16 +18,13 @@ def select_run(select, state):
     elif select == 4: building(state)
     else: home_page()
 
-def home_page():
-    print("home_page")
+def home_page()
 
 #dining icon show dining color, other icons disappear
-def dining_show_color():
-    print("dining icon变dining色，其它icon消失")
+def dining_show_color()
 
 #dining building show selected dining color
-def building_show_dining_color():
-    print("dining楼变dining颜色")
+def building_show_dining_color()
 
 def dining(current_states):
     #if select dining, select dining building
@@ -44,12 +36,10 @@ def dining(current_states):
         home_page()
 
 #lib icon show lib color, other icons disappear
-def lib_show_color():
-    print("lib icon变lib色, 其它icon消失")
+def lib_show_color()
 
 #lib building show selected lib color
-def building_show_lib_color():
-    print("lib楼变lib色")
+def building_show_lib_color()
 
 def lib(current_states):
     #if select lib, select lib building
@@ -61,12 +51,10 @@ def lib(current_states):
         home_page()
 
 #guide icon show guide color, other icons disappear
-def guide_show_color():
-    print("guide icon变色，其它icon消失")
+def guide_show_color()
 
 #navigation system
-def begin_guide():
-    print("导航系统")
+def begin_guide()
 
 def guide(current_states):
     #if select guide, begin guide
@@ -78,12 +66,10 @@ def guide(current_states):
         home_page()
 
 #show setting menu
-def setting_option():
-    print("目录")
+def setting_option()
 
 #other options disppear besiedes setting
-def show_setting():
-    print("除了setting icon其它都消失")
+def show_setting()
 
 def setting(current_states):
     #if select setting, show setting option
@@ -94,12 +80,10 @@ def setting(current_states):
         home_page()
 
 #show a star on the building, show its name below the star
-def building_star():
-    print("选的building标星，名字突出")
+def building_star()
 
 #pop up a box show bulding information
-def building_show_info():
-    print("展示building信息在弹出对话框里")
+def building_show_info()
 
 def building(current_states):
     #if select building, show building information
